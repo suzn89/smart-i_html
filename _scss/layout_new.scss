@@ -1,0 +1,685 @@
+@charset 'utf-8';
+.header {
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  line-height:36px;
+  min-width:1368px;
+  height:60px;
+  padding:12px;
+  background:#222527;
+  z-index:998;
+  &__title {
+    float:left;
+    font-size:18px;
+    font-weight:700;
+    color:#75797d;
+    img {
+      width:110px;
+      vertical-align:middle;
+      margin-right:8px;
+    }
+    &:after {
+      content:'';
+      border-right:2px solid #75797d;
+      padding:0 4px;
+    }
+  }
+  h2 {
+    float:left;
+    margin-left:8px;
+    font-size:20px;
+    font-weight:700;
+    color:#ffffff;
+  }
+}
+.topBtns {
+  display:inline-block;
+  position:absolute;
+  right:0;
+  top:0;
+  width:120px;
+  height:60px;
+  z-index:998;
+  background-color:#222527;
+  >li {
+    position:relative;
+    float:left;
+    width:60px;
+    height:60px;
+    border-left:1px solid #404345;
+    .dropdown {
+      display:none;
+      position:absolute;
+      width:200px;
+      right:0;
+      z-index:999;
+
+      li {
+        background:#232729;
+        height:35px;
+        line-height:35px;
+        text-align:center;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        border-bottom:1px solid #404345;
+
+        a {
+          padding:0 15px;
+          color:#7a7d80;
+          -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+
+          &:hover {
+            color:#ffffff;
+          }
+        }
+      }
+    }
+
+    a {
+      display:block;
+      width:100%;
+      height:100%;
+      &:hover {
+        background-color:#232729;
+      }
+    }
+
+    .setting {
+      background:url(../images/ico_setting.png) center 50% no-repeat;
+    }
+
+    .logout {
+      background:url(../images/ico_logout.png) center 50% no-repeat;
+    }
+  }
+}
+.searchSlide {
+  position:absolute;
+  top:0;
+  right:120px;
+  width:55px;
+  height:60px;
+  overflow:hidden;
+  z-index:700;
+  &__btn {
+    float:left;
+    width:55px;
+    height:60px;
+    background:url(../images/ico_search.png) center 50% no-repeat;
+    border-left:1px solid #404345;
+  }
+  select {
+    float:left;
+    padding:0px 5px;
+    margin-top:15px;
+    width:145px;
+    height:30px;
+    line-height:30px;
+    border-radius:4px;
+  }
+  .topsearch_ipt {
+    float:left;
+    margin-top:15px;
+    width:290px;
+    height:30px;
+    vertical-align:top;
+    border-radius:4px;
+  }
+  select+.topsearch_ipt {
+    margin-left:8px;
+  }
+  .borderbtn {
+    display:inline-block;
+    height:30px;
+    min-width:70px;
+    padding:0 8px;
+    margin-top:15px;
+    margin-left:8px;
+    line-height:29px;
+    border:1px solid #0080fe;
+    border-radius:4px;
+    color:#0080fe;
+    text-align:center;
+    &:hover {
+      background:#0080fe;
+      color:#ffffff;
+    }
+  }
+}
+.searchSlide.open {
+  width:600px;
+}
+
+// 좌측 NAV 
+.aside {
+  position:absolute;
+  left:0;
+  top:60px;
+  width:110px;
+  height:calc(100% - 60px);
+  background:url(../images/menu_bg.png) no-repeat;
+  background-color:#222527;
+  z-index:998;
+  .nav {
+    li {
+      border-bottom:1px solid #2c2c2c;
+      a {
+        display:block;
+        width:100%;
+        height:110px;
+      }
+      &:after {
+        content:'';
+        border-bottom:1px solid #1e1e1e;
+      }
+    }
+    li:first-child a {
+      background:url(../images/menu_01.png) right top no-repeat;
+    }
+    li:nth-child(2) a {
+      background:url(../images/menu_02.png) right top no-repeat;
+    }
+    li:nth-child(3) a {
+      background:url(../images/menu_03.png) right top no-repeat;
+    }
+    li>a.active {
+      background-position:left top;
+    }
+    li>a:hover {
+      background-position:left top;
+    }
+  }
+}
+
+//gis 정보
+.section {
+  position:relative;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  background:#cccccc;
+  iframe {
+    width:100%;
+    height:100%;
+  }
+}
+
+#gisFrame {
+  overflow:hidden;
+  width:100%;
+  height:100%;
+  background:url(../images/gis_bg.png) left top no-repeat ;
+  background-size:cover;
+  position:relative;
+}
+.areaInfo {
+  position:absolute;
+  top:70px;
+  left:120px;
+  width:300px;
+  background:rgba($color:#1c2026, $alpha:0.8);
+  color:#93999e;
+  &__title {
+    background:rgba($color:#181a1c, $alpha:0.9);
+    font-size:16px;
+    select {
+      width:100%;
+      padding:10px;
+      background:none;
+      color:#595d60;
+    }
+  }
+  &__h3 {
+    margin-bottom:10px;
+    color:#ffffff;
+    font-size:18px;
+    text-align:left;
+  }
+  &__weather {
+    text-align:center;
+    .weatherimg {
+      display:inline-block;
+      img {
+        float:left;
+      }
+    }
+    dl.weathericon {
+      display:inline-block;
+      margin-left:8px;
+      dt {
+        font-size:22px;
+        font-weight:bold;
+        color:#ffffff;
+        text-align:left;
+      }
+      dd {
+        font-size:22px;
+        color:#ffffff;
+        ul li {
+          display:inline-block;
+          text-align:left;
+          &.temp {
+            font-weight:bold;
+          }
+          &.text {
+            font-weight:300;
+          }
+        }
+      }
+    }
+    .addtional {
+      overflow:hidden;
+      clear:both;
+      width:90%;
+      margin:8px auto 0;
+      &__opt {
+        float:left;
+        width:50%;
+        padding:0 10px;
+        font-size:15px;
+        dt {
+          float:left;
+          color:#8f8f8f;
+        }
+        dd {
+          color:#ffffff;
+          text-align:right;
+        }
+      }
+    }
+  }
+  &__air {
+    .air {
+      li {
+        float:left;
+        width:50%;
+        margin-bottom:8px;
+        text-align:center;
+        font-weight:500;
+        font-size:12px;
+        .figure {
+          display:block;
+          font-size:21px;
+          letter-spacing:-1px;
+        }
+        .lv1 {
+          color:#20bcf6;
+        }
+        .lv2 {
+          color:#77d62e;
+        }
+        .lv3 {
+          color:#e1c63f;
+        }
+        .lv4 {
+          color:#eb5151;
+        }
+        &:nth-child(2n) {
+          background:url(../images/line01.png) left 15px no-repeat;
+        }
+      }
+    }
+  }
+  .lvlegend {
+    clear:both;
+    padding:8px 0;
+    border-top:1px solid #151617;
+    color:#93999e;
+    font-size:12px;
+    text-align:center;
+    li {
+      display:inline-block;
+      &:before {
+        content:'●';
+        margin-right:4px;
+      }
+    }
+    li+li {
+      margin-left:20px;
+    }
+    li.lv1:before {
+      color:#20bcf6;
+    }
+    li.lv2:before {
+      color:#77d62e;
+    }
+    li.lv3:before {
+      color:#e1c63f;
+    }
+    li.lv4:before {
+      color:#eb5151;
+    }
+  }
+}
+
+.latestEvent {
+  position:absolute;
+  top:475px;
+  left:120px;
+  width:300px;
+  background:rgba($color:#1c2026, $alpha:0.8);
+  .areaInfo__title {
+    h2 {
+      width:100%;
+      padding:10px;
+      font-size:16px;
+      color:#595d60;
+    }
+  }
+  &__content {
+    &.alarm dl {
+      position:relative;
+      padding-left:50px;
+      padding-top:8px;
+      padding-right:10px;
+      padding-bottom:8px;
+      line-height:1.3;
+
+      dt a {
+        font-size:14px;
+        color:#d5d5d5;
+        font-weight:500;
+      }
+
+      dd {
+        font-size:9px;
+        color:#d5d5d5;
+      }
+
+      &:before {
+        position:absolute;
+        left:10px;
+        top:10px;
+        -webkit-transform:translate(0%, 0%);
+        transform:translate(0%, 0%);
+        width:28px;
+        height:28px;
+        color:#ffffff;
+        text-align:center;
+        line-height:28px;
+        border-radius:4px;
+        font-size:10px;
+        font-weight:500;
+      }
+
+      &.video:before {
+        content:'영상';
+        background:#c500ff;
+      }
+
+      &.police:before {
+        content:'경찰';
+        background:#006dff;
+      }
+
+      &.fire:before {
+        content:'소방';
+        background:#fd4357;
+      }
+
+      &.jaenan:before {
+        content:'재난';
+        background:#ff832b;
+      }
+
+      &.support:before {
+        content:'사회';
+        background:#39d500;
+      }
+
+      +dl {
+        border-top:1px solid rgba(109, 120, 122, 0.3);
+      }
+    }
+
+    &.tbllist {
+      color:#ffffff;
+
+      table {
+        th,td {
+          padding:0.5rem;
+          font-size:1.3rem;
+          color:#d5d5d5;
+          text-align:left;
+        }
+
+        th a,td a {
+          color:#d5d5d5;
+        }
+
+        th {
+          background:rgba(101, 154, 245, 0.1);
+        }
+
+        td {
+          border-bottom:1px solid rgba(112, 112, 112, 0.5);
+        }
+
+        tbody tr:hover td {
+          background:#006dff;
+        }
+      }
+    }
+  }
+}
+
+.bottomPanel {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align:start;
+  -ms-flex-align:start;
+  align-items:flex-start;
+  position:absolute;
+  left:110px;
+  bottom:0;
+  width:calc(100% - 110px);
+  padding:5px;
+  background:rgba(28, 32, 38, 0.9);
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  z-index:999;
+
+  .camera {
+    position:relative;
+    -ms-flex-preferred-size:20%;
+    flex-basis:20%;
+  }
+
+  .camera__name {
+    position:absolute;
+    left:0;
+    bottom:0;
+    display:block;
+    width:100%;
+    padding:5px 10px;
+    text-align:center;
+    color:#ffffff;
+    font-size:14px;
+    background:rgba(13, 14, 14, 0.5);
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+
+  .camera {
+    img {
+      width:100%;
+    }
+
+    +.camera {
+      margin-left:5px;
+    }
+  }
+
+  .panelbtn {
+    display:block;
+    position:absolute;
+    top:-20px;
+    left:50%;
+    width:110px;
+    height:20px;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    z-index:200;
+    background-color:rgba(13, 14, 14, 0.5);
+    -webkit-transform:translate(-50%, 0%);
+    transform:translate(-50%, 0%);
+
+    &:hover {
+      background-color:rgba(13, 14, 14, 0.8);
+    }
+
+    &:before {
+      position:absolute;
+      width:100%;
+      height:100%;
+      content:'';
+      background:url(../images/arrow_down.png) center 50% no-repeat;
+      background-size:12px;
+      -webkit-transform:rotate(0deg);
+      transform:rotate(0deg);
+    }
+
+    &.open:before {
+      -webkit-transform:rotate(-180deg);
+      transform:rotate(-180deg);
+    }
+  }
+}
+
+.gisControl {
+  position:absolute;
+  left:430px;
+  top:70px;
+  width:55px;
+  background:#222527;
+  border:1px solid #191c1e;
+  border-radius:4px;
+  ul li {
+    a {
+      display:block;
+      width:100%;
+      height:100%;
+      color:#8f8f8f;
+      letter-spacing:-0.8px;
+      font-size:11px;
+      text-align:center;
+      font-weight:500;
+      .icon {
+        display:block;
+        width:21px;
+        height:21px;
+        margin:9px auto 5px;
+      }
+      &:hover {
+        color:#0080fe;
+        .icon {
+          background-position:right top;
+        }
+      }
+    }
+  }
+  .active {
+    a {
+      color:#0080fe;
+      .icon {
+        background-position:right top;
+      }
+    }
+  }
+  &__1dp {
+    li {
+      display:inline-block;
+      width:100%;
+      height:55px;
+    }
+    .map {
+      position:relative;
+      &:before {
+        content:'';
+        width:7px;
+        height:7px;
+        position:absolute;
+        right:1px;
+        bottom:1px;
+        background:url(../images/map_more.png) center top no-repeat;        
+      }
+      &:hover {
+        .mapmore {
+          display: block;
+        }
+      }
+      .mapmore {
+        display: none;
+        position:absolute;
+        left:53px;
+        top:-1px;
+        width:167px;
+        height:56px;
+        background:#222527;
+        border:1px solid #191c1e;
+        border-radius:0px 4px 4px 0px;
+        border-left-color:#2b3035;
+      }
+    }
+    li+li {
+      border-top:1px solid #2b3035;
+    }
+    .cameramove {
+      .icon {
+        background:url(../images/cameramove.png) left top no-repeat;
+      }
+    }
+    .distance {
+      .icon {
+        background:url(../images/distance.png) left top no-repeat;
+      }
+    }
+    .square {
+      .icon {
+        background:url(../images/square.png) left top no-repeat;
+      }
+    }
+    .map {
+      .icon {
+        background:url(../images/map.png) left top no-repeat;
+      }
+    }
+    .traffic {
+      .icon {
+        background:url(../images/traffic.png) left top no-repeat;
+      }
+    }
+    .satellite {
+      .icon {
+        background:url(../images/satellite.png) left top no-repeat;
+      }
+    }
+    .location {
+      .icon {
+        background:url(../images/location.png) left top no-repeat;
+      }
+    }
+    .layer {
+      .icon {
+        background:url(../images/layer.png) left top no-repeat;
+      }
+    }
+  }
+  &__2dp {
+    li {
+      float:left;
+      width:55px;
+    }
+    li+li {
+      border-left:1px solid #2b3035;
+    }
+  }
+}
