@@ -5,6 +5,10 @@ $(document).ready(function(){
 
   $('.searchSlide__btn').click(function(e) {
     $('.searchSlide').toggleClass('open');
+  });  
+
+  $('.coverLayerBtn').click(function(e) {
+    $('.listDetail').toggleClass('close');
   });   
 
   panelOpen = true;

@@ -113,6 +113,7 @@
   height: 60px;
   overflow: hidden;
   z-index: 700;
+  /* ie 기본 화살표 없앰 */
 }
 
 .searchSlide__btn {
@@ -131,6 +132,18 @@
   height: 30px;
   line-height: 30px;
   border-radius: 4px;
+  background: url(../images/select_bg.gif) 100% 50% no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  word-wrap: break-word;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+.searchSlide select::-ms-expand {
+  display: none;
 }
 
 .searchSlide .topsearch_ipt {
@@ -177,7 +190,7 @@
   height: calc(100% - 60px);
   background: url(../images/menu_bg.png) no-repeat;
   background-color: #222527;
-  z-index: 998;
+  z-index: 997;
 }
 
 .aside .nav li {
@@ -213,6 +226,27 @@
 
 .aside .nav li > a:hover {
   background-position: left top;
+}
+
+.aside .date {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 110px;
+  background: #1e1e1e;
+  padding: 10px  0;
+}
+
+.aside .date li {
+  color: #7a7d80;
+  text-align: center;
+  line-height: 1.21;
+  font-size: 13px;
+}
+
+.aside .date li:first-child {
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .section {
@@ -257,6 +291,12 @@
   padding: 10px;
   background: none;
   color: #595d60;
+  background: url(../images/title_select.png) 100% 50% no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  word-wrap: break-word;
 }
 
 .areaInfo__h3 {
@@ -523,6 +563,7 @@
   left: 110px;
   bottom: 0;
   width: calc(100% - 110px);
+  min-width: 1258px;
   padding: 5px;
   background: rgba(28, 32, 38, 0.9);
   -webkit-box-sizing: border-box;
@@ -721,5 +762,173 @@
 
 .gisControl__2dp li + li {
   border-left: 1px solid #2b3035;
+}
+
+.leftPanel {
+  position: relative;
+  left: 110px;
+  top: 60px;
+  width: 300px;
+  height: calc(100% - 60px);
+  background: #F1F1F1;
+}
+
+.leftPanel__title {
+  background-color: #ffffff;
+  border-bottom: 1px solid #DBDBDB;
+  margin-bottom: 2px;
+}
+
+.leftPanel__title select {
+  padding: 10px;
+  width: 100%;
+  background: url(../images/select_bg.gif) 97% 50% no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  word-wrap: break-word;
+  z-index: 10;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.leftPanel__listwrap {
+  width: 100%;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.leftPanel__view {
+  margin-top: 4px;
+}
+
+.leftPanel__view h4 {
+  width: 100%;
+  padding: 4px 0;
+  background: #CFCFCF;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cardList {
+  border: 1px solid #ffffff;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.cardList:hover {
+  border: 1px solid #CFCFCF;
+}
+
+.cardList__title {
+  width: 100%;
+  background: #ffffff;
+  color: #5F6367;
+  font-size: 13px;
+  overflow-y: hidden;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.cardList__title dt {
+  float: left;
+  width: 45px;
+  color: #ffffff;
+  text-align: center;
+  height: 18px;
+  font-size: 12px;
+}
+
+.cardList__title dd {
+  float: left;
+  width: calc(100% - 45px);
+  padding-left: 5px;
+  color: #5F6367;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardList__title .video {
+  background: #C500FF;
+  border: 1px solid #9B00C8;
+}
+
+.cardList__title .police {
+  background: #006dff;
+  border: 1px solid #005DD9;
+}
+
+.cardList__title .fire {
+  background: #fd4357;
+  border: 1px solid #DF3548;
+}
+
+.cardList__title .jaenan {
+  background: #ff832b;
+  border: 1px solid #E67422;
+}
+
+.cardList__title .support {
+  background: #39d500;
+  border: 1px solid #3BB110;
+}
+
+.cardList .info {
+  overflow: hidden;
+  background: #ffffff;
+  border-bottom: 1px solid #F1F1F1;
+  padding: 4px 0;
+}
+
+.cardList__col2 {
+  float: left;
+  padding: 0 10px;
+}
+
+.cardList__col2 dt {
+  font-size: 12px;
+  color: #75797D;
+  font-weight: 700;
+  float: left;
+  margin-right: 8px;
+}
+
+.cardList__col2 dd {
+  float: left;
+  font-size: 12px;
+  color: #75797D;
+  font-weight: 300;
+}
+
+.cardList__col2 + .cardList__col2 {
+  padding-left: 10px;
+}
+
+.cardList + .cardList {
+  margin-top: 4px;
+}
+
+.viewarea {
+  overflow-y: scroll;
+  width: 100%;
+  height: calc(100vh - 745px);
+  min-height: 220px;
+  background: #ffffff;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.viewarea th {
+  background: #F1F1F1;
+  text-align: left;
+  font-weight: 500;
+}
+
+.viewarea th, .viewarea td {
+  padding: 4px;
+  border-bottom: 1px solid #F1F1F1;
+  letter-spacing: -1px;
 }
 /*# sourceMappingURL=layout_new.css.map */
