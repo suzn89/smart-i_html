@@ -1,4 +1,145 @@
 @charset 'utf-8';
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/login_bg.png) center top no-repeat;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.login__area {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 388px;
+  height: 466px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.login__bi {
+  width: 100%;
+  text-align: center;
+
+  img {
+    width: 220px;
+  }
+
+  p {
+    margin-top: 10px;
+    color: #636371;
+    opacity: 0.4;
+  }
+}
+
+.login__form {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 388px;
+  margin-top: 32px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 52px;
+
+  p {
+    text-align: center;
+    font-size: 13px;
+    color: #BCBCBC;
+    margin-bottom: 18px;
+  }
+
+  .box_login_ipt {
+    position: relative;
+    margin-bottom: 20px;
+
+    .i_label {
+      position: absolute;
+      left: 20px;
+      top: 15px;
+      font-size: 0;
+    }
+  }
+}
+
+.box_login_ipt input {
+  &[type="text"] {
+    background: url(../images/person.png) 20px 50% no-repeat;
+    background-color: rgba(128, 128, 128, 0.2);
+    background-size: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #9A9494;
+    padding-left: 50px;
+    border-radius: 4px;
+  }
+
+  &[type="password"] {
+    background: url(../images/lock.png) 20px 50% no-repeat;
+    background-color: rgba(128, 128, 128, 0.2);
+    background-size: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #9A9494;
+    padding-left: 50px;
+    border-radius: 4px;
+  }
+}
+
+.login__form {
+  input {
+    font-size: 14px;
+    width: 100%;
+    height: 43px !important;
+    background: rgba(40, 42, 52, 0.7);
+    border: none;
+    color: #9A9494;
+    padding-left: 50px;
+    border-radius: 4px;
+
+    &::-webkit-input-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
+      color: #ACADB0;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #ACADB0;
+    }
+
+    &:-ms-input-placeholder, &::-ms-input-placeholder, &::placeholder {
+      color: #ACADB0;
+    }
+  }
+
+  .btn_login {
+    display: block;
+    margin-top: 40px;
+
+    input {
+      display: block;
+      padding: 0;
+      width: 100%;
+      height: 42px;
+      background: #006DFF;
+      color: #ffffff;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+  }
+}
+
+.login .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 70px 0;
+  text-align: center;
+  border-top: 1px solid #24242D;
+  color: rgba(99, 99, 113, 0.4);
+  font-weight: 300;
+}
 .header {
   position:absolute;
   left:0;
@@ -230,16 +371,11 @@
   top:0px;
   width:100%;
   height:100%;  
+  min-width: 1368px;
   iframe {
     width:100%;
     height:100%;
-  }
-  .adminPage {
-    margin-left: 110px;
-    margin-top: 60px;
-    padding-left: 20px;
-    padding-top: 30px;
-  }
+  }  
   &.admin {
     background: #eef2f5;
   }
@@ -261,19 +397,34 @@
   background:rgba($color:#1c2026, $alpha:0.8);
   color:#93999e;
   &__title {
+    position: relative;
     background:rgba($color:#181a1c, $alpha:0.9);
     font-size:16px;
     select {
+      display: inline-block;
       width:100%;
       padding:10px;
       background:none;
       color:#595d60;
-      background:url(../images/title_select.png) 100% 50% no-repeat;
+      background:url(../images/title_select.png) 92% 50% no-repeat;
       -webkit-appearance:none;
       -moz-appearance:none;
       -o-appearance:none;
       appearance:none;
       word-wrap:break-word;
+      border:none;
+      height: auto;
+    }
+    .locationPin {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 21px;
+      height: 21px;      
+      background: url(../images/pin_off.png) center 2px no-repeat;
+      &.pinon {
+        background: url(../images/pin_on.png) center 2px no-repeat;
+      }
     }
   }
   &__h3 {
@@ -411,6 +562,9 @@
       padding:10px;
       font-size:16px;
       color:#595d60;
+    }
+    select {
+      border: 0;
     }
   }
   &__content {
@@ -740,7 +894,7 @@
     border-bottom: 1px solid #DBDBDB;
     margin-bottom: 2px;
     select {
-      padding: 10px; 
+      padding: 0 10px; 
       width: 100%;
       background:url(../images/select_bg.gif) 97% 50% no-repeat;
       -webkit-appearance:none;
@@ -875,5 +1029,9 @@
     letter-spacing: -1px;
   }
 }
-
-
+.adminwrap {
+  background: #EEF2F5;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}

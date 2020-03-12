@@ -1,4 +1,150 @@
 @charset "UTF-8";
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/login_bg.png) center top no-repeat;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.login__area {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 388px;
+  height: 466px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.login__bi {
+  width: 100%;
+  text-align: center;
+}
+
+.login__bi img {
+  width: 220px;
+}
+
+.login__bi p {
+  margin-top: 10px;
+  color: #636371;
+  opacity: 0.4;
+}
+
+.login__form {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 388px;
+  margin-top: 32px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 52px;
+}
+
+.login__form p {
+  text-align: center;
+  font-size: 13px;
+  color: #BCBCBC;
+  margin-bottom: 18px;
+}
+
+.login__form .box_login_ipt {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.login__form .box_login_ipt .i_label {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 0;
+}
+
+.box_login_ipt input[type="text"] {
+  background: url(../images/person.png) 20px 50% no-repeat;
+  background-color: rgba(128, 128, 128, 0.2);
+  background-size: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #9A9494;
+  padding-left: 50px;
+  border-radius: 4px;
+}
+
+.box_login_ipt input[type="password"] {
+  background: url(../images/lock.png) 20px 50% no-repeat;
+  background-color: rgba(128, 128, 128, 0.2);
+  background-size: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #9A9494;
+  padding-left: 50px;
+  border-radius: 4px;
+}
+
+.login__form input {
+  font-size: 14px;
+  width: 100%;
+  height: 43px !important;
+  background: rgba(40, 42, 52, 0.7);
+  border: none;
+  color: #9A9494;
+  padding-left: 50px;
+  border-radius: 4px;
+}
+
+.login__form input::-webkit-input-placeholder, .login__form input:-ms-input-placeholder, .login__form input::-ms-input-placeholder {
+  color: #ACADB0;
+}
+
+.login__form input::-webkit-input-placeholder {
+  color: #ACADB0;
+}
+
+.login__form input:-ms-input-placeholder, .login__form input::-ms-input-placeholder, .login__form input:-ms-input-placeholder {
+  color: #ACADB0;
+}
+
+.login__form input:-ms-input-placeholder, .login__form input::-ms-input-placeholder, .login__form input::-ms-input-placeholder {
+  color: #ACADB0;
+}
+
+.login__form input:-ms-input-placeholder, .login__form input::-ms-input-placeholder, .login__form input::placeholder {
+  color: #ACADB0;
+}
+
+.login__form .btn_login {
+  display: block;
+  margin-top: 40px;
+}
+
+.login__form .btn_login input {
+  display: block;
+  padding: 0;
+  width: 100%;
+  height: 42px;
+  background: #006DFF;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.login .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 70px 0;
+  text-align: center;
+  border-top: 1px solid #24242D;
+  color: rgba(99, 99, 113, 0.4);
+  font-weight: 300;
+}
+
 .header {
   position: absolute;
   left: 0;
@@ -255,18 +401,12 @@
   top: 0px;
   width: 100%;
   height: 100%;
+  min-width: 1368px;
 }
 
 .section iframe {
   width: 100%;
   height: 100%;
-}
-
-.section .adminPage {
-  margin-left: 110px;
-  margin-top: 60px;
-  padding-left: 20px;
-  padding-top: 30px;
 }
 
 .section.admin {
@@ -292,21 +432,38 @@
 }
 
 .areaInfo__title {
+  position: relative;
   background: rgba(24, 26, 28, 0.9);
   font-size: 16px;
 }
 
 .areaInfo__title select {
+  display: inline-block;
   width: 100%;
   padding: 10px;
   background: none;
   color: #595d60;
-  background: url(../images/title_select.png) 100% 50% no-repeat;
+  background: url(../images/title_select.png) 92% 50% no-repeat;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
   word-wrap: break-word;
+  border: none;
+  height: auto;
+}
+
+.areaInfo__title .locationPin {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 21px;
+  height: 21px;
+  background: url(../images/pin_off.png) center 2px no-repeat;
+}
+
+.areaInfo__title .locationPin.pinon {
+  background: url(../images/pin_on.png) center 2px no-repeat;
 }
 
 .areaInfo__h3 {
@@ -468,6 +625,10 @@
   padding: 10px;
   font-size: 16px;
   color: #595d60;
+}
+
+.latestEvent .areaInfo__title select {
+  border: 0;
 }
 
 .latestEvent__content.alarm dl {
@@ -790,7 +951,7 @@
 }
 
 .leftPanel__title select {
-  padding: 10px;
+  padding: 0 10px;
   width: 100%;
   background: url(../images/select_bg.gif) 97% 50% no-repeat;
   -webkit-appearance: none;
@@ -940,5 +1101,12 @@
   padding: 4px;
   border-bottom: 1px solid #F1F1F1;
   letter-spacing: -1px;
+}
+
+.adminwrap {
+  background: #EEF2F5;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 /*# sourceMappingURL=layout_new.css.map */

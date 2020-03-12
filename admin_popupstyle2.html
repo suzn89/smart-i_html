@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_new.css">
+	<link rel="stylesheet" type="text/css" href="css/common_new.css">
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/custom.js"></script>
+</head>
+
+<body>
+  <div class="adminwrap">
+    <div class="adminPage">
+      <h2 class="adminPage__title">사용자관리</h2>
+      <div class="searchBox">
+        <div class="searchBox__item">
+          <span class="title">사용자역할</span>
+          <select name="" id="" title="해당항목선택">
+            <option value="">선택 1</option>
+            <option value="">선택 2</option>
+            <option value="">선택 3</option>
+          </select>
+        </div>
+        <div class="searchBox__item">
+          <label for="text1" class="title">아이디</label>
+          <input type="text" id="text1">
+        </div>
+        <div class="searchBox__item">
+          <label for="text1" class="title">이름</label>
+          <input type="text" id="text1">
+        </div>
+        <div class="searchBox__item">
+          <a href="#" class="search">조회</a>
+        </div>
+      </div> <!-- // searchBox -->
+
+      <div class="listType">
+        <div class="btnArea pageinfo">
+          <ul>
+            <li>전체 <span class="ptcolor">55</span>건</li>
+            <li><span class="ptcolor">1</span>/ <span>5</span>페이지</li>
+          </ul>
+          <a href="#" class="btn__primary small">신규등록</a>
+          <a href="#" class="btn__cancle small">선택삭제</a>
+        </div>
+        <table class="basic_tbl_list" summary="테이블이 어떻게 구성되어있고 무엇을 보여주는지 간략한 내용, html5에서 축소된 속성임">
+          <caption>테이블제목</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>              
+              <th class="ac">
+                <div class="listCheck">
+                  <input type="checkbox" name="" id="checkbox">
+                  <label for="checkbox" class="ir">선택</label>
+                </div>
+              </th>
+              <th class="ac">번호</th>
+              <th>권한</th>
+              <th>아이디</th>
+              <th>마커이미지</th>
+              <th>연락처</th>
+              <th>정보</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ac">
+                <div class="listCheck">
+                  <input type="checkbox" name="" id="checkbox1">
+                  <label for="checkbox1" class="ir">선택</label>
+                </div>
+              </td>
+              <td class="ac">1</td>
+              <td>role_adimn</td>
+              <td>                
+                <select name="" id="" title="해당항목선택">
+                  <option value="">선택 1</option>
+                  <option value="">선택 2</option>
+                  <option value="">선택 3</option>
+                </select>
+              </td>
+              <td class="imagetd"><img src="images/select marker_02.png"></td>                
+              <td>관리총괄</td>
+              <td><a href="#" class="listview"><span class="ir">더보기</span></a></td>
+            </tr>
+            <tr>
+              <td class="ac">
+                <div class="listCheck">
+                  <input type="checkbox" name="" id="checkbox2">
+                  <label for="checkbox2" class="ir">선택</label>
+                </div>
+              </td>
+              <td class="ac">2</td>
+              <td>gieladkg</td>
+              <td>
+                <select name="" id="" title="해당항목선택">
+                  <option value="">선택 1</option>
+                  <option value="">선택 2</option>
+                  <option value="">선택 3</option>
+                </select>
+              </td>
+              <td class="imagetd"><img src="images/select marker_04.png"></td>                 
+              <td>관리총괄</td>
+              <td><a href="#" class="listview"><span class="ir">더보기</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pageNation">
+          <ul>
+            <li><a href="#" class="first"><span class="ir">처음으로</span></a></li>
+            <li><a href="#" class="prev"><span class="ir">이전</span></a></li>
+            <li><a href="#" class="current">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+            <li><a href="#" class="next"><span class="ir">다음</span></a></li>
+            <li><a href="#" class="end"><span class="ir">맨끝으로</span></a></li>
+          </ul>
+        </div>
+      </div> <!-- // listType -->
+
+    </div><!-- // adminPage -->
+  </div>
+
+
+
+<!-- 레이어 팝업 시작-->
+<div class="popupWrap">
+  <div class="layerpopup style2">
+    <div class="layerpopup__top">
+      <h4>팝업제목입력 - layerpopup style2 (리스트팝업)</h4>
+      <a href="#" class="popup__close">닫기</a>
+    </div>
+    <div class="layerpopup__content">
+      <div class="wrap">
+        <div class="wrap_left">
+          <h5>사용자 선택</h5>
+          <div class="listType">            
+            <table class="basic_tbl_list" summary="테이블이 어떻게 구성되어있고 무엇을 보여주는지 간략한 내용, html5에서 축소된 속성임">
+              <caption>테이블제목</caption>
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>            
+              </colgroup>
+              <thead>
+                <tr>              
+                  <th class="ac">
+                    <div class="listCheck">
+                      <input type="checkbox" name="" id="checkbox">
+                      <label for="checkbox" class="ir">선택</label>
+                    </div>
+                  </th>
+                  <th>사용자ID</th>
+                  <th>성명</th>
+                  <th class="ac">사용여부</th>                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="ac">
+                    <div class="listCheck">
+                      <input type="checkbox" name="" id="checkbox1">
+                      <label for="checkbox1" class="ir">선택</label>
+                    </div>
+                  </td>
+                  <td>admin</td>
+                  <td>관리자</td>
+                  <td class="ac">                
+                    Y
+                  </td>                 
+                </tr>
+                <tr>
+                  <td class="ac">
+                    <div class="listCheck">
+                      <input type="checkbox" name="" id="checkbox1">
+                      <label for="checkbox1" class="ir">선택</label>
+                    </div>
+                  </td>
+                  <td>admin</td>
+                  <td>관리자</td>
+                  <td class="ac">                
+                    Y
+                  </td>    
+                </tr>
+              </tbody>
+            </table>
+          
+          </div> <!-- // listType -->
+        </div><!-- // wrap_left -->
+        <div class="wrap_center">
+          <ul>
+            <li><a href="#"><span class="ir">오른쪽으로이동</span></a></li>
+            <li><a href="#"><span class="ir">왼쪽으로이동</span></a></li>
+          </ul>
+        </div><!-- // wrap_center -->
+        <div class="wrap_right">
+          <h5>그룹 선택</h5>
+          <div class="searchBox">
+            <div class="searchBox__item">              
+              <select name="" id="" title="해당항목선택">
+                <option value="">선택 1선택 1선택 1</option>
+                <option value="">선택 2</option>
+                <option value="">선택 3</option>
+              </select>
+            </div>
+            <div class="searchBox__item">              
+              <select name="" id="" title="해당항목선택">
+                <option value="">선택 1</option>
+                <option value="">선택 2</option>
+                <option value="">선택 3</option>
+              </select>
+            </div>
+            <div class="searchBox__item">              
+              <input type="text" id="text1">
+            </div>
+            <div class="btnArea ar mt10">        
+              <a href="#" class="btn__primary2">조회</a>              
+            </div>   
+          </div> <!-- // searchBox -->
+          <div class="listType">            
+            <table class="basic_tbl_list" summary="테이블이 어떻게 구성되어있고 무엇을 보여주는지 간략한 내용, html5에서 축소된 속성임">
+              <caption>테이블제목</caption>
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>            
+              </colgroup>
+              <thead>
+                <tr>              
+                  <th class="ac">
+                    <div class="listCheck">
+                      <input type="checkbox" name="" id="checkbox">
+                      <label for="checkbox" class="ir">선택</label>
+                    </div>
+                  </th>
+                  <th>상위그룹</th>
+                  <th>그룹명</th>
+                  <th>사용자ID</th>                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="ac">
+                    <div class="listCheck">
+                      <input type="checkbox" name="" id="checkbox1">
+                      <label for="checkbox1" class="ir">선택</label>
+                    </div>
+                  </td>
+                  <td>112</td>
+                  <td>총괄</td>
+                  <td>user2</td>                 
+                </tr>
+                <tr>
+                  <td class="ac">
+                    <div class="listCheck">
+                      <input type="checkbox" name="" id="checkbox1">
+                      <label for="checkbox1" class="ir">선택</label>
+                    </div>
+                  </td>
+                  <td>112</td>
+                  <td>총괄</td>
+                  <td>user2</td>    
+                </tr>
+              </tbody>
+            </table>
+          
+          </div> <!-- // listType -->
+        </div><!-- // wrap_right -->
+      </div>
+      <div class="btnArea">        
+        <a href="#" class="btn__primary2">등록</a>
+        <a href="#" class="btn__cancle">취소</a>
+      </div>      
+    </div> <!-- // 팝업 컨텐츠 끝-->
+  </div>
+  <div class="mask"></div>
+</div>
+<!-- 레이어 팝업 끝-->
+    
+</body>
+
+</html>

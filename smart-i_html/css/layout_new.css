@@ -1,0 +1,1105 @@
+@charset "UTF-8";
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/login_bg.png) center top no-repeat;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.login__area {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 388px;
+  height: 466px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.login__bi {
+  width: 100%;
+  text-align: center;
+}
+
+.login__bi img {
+  width: 220px;
+}
+
+.login__bi p {
+  margin-top: 10px;
+  color: #636371;
+  opacity: 0.4;
+}
+
+.login__form {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 388px;
+  margin-top: 32px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 52px;
+}
+
+.login__form p {
+  text-align: center;
+  font-size: 13px;
+  color: #BCBCBC;
+  margin-bottom: 18px;
+}
+
+.login__form .box_login_ipt {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.login__form .box_login_ipt .i_label {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 0;
+}
+
+.box_login_ipt input[type="text"] {
+  background: url(../images/person.png) 20px 50% no-repeat;
+  background-color: rgba(128, 128, 128, 0.2);
+  background-size: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #9A9494;
+  padding-left: 50px;
+  border-radius: 4px;
+}
+
+.box_login_ipt input[type="password"] {
+  background: url(../images/lock.png) 20px 50% no-repeat;
+  background-color: rgba(128, 128, 128, 0.2);
+  background-size: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #9A9494;
+  padding-left: 50px;
+  border-radius: 4px;
+}
+
+.login__form input {
+  font-size: 14px;
+  width: 100%;
+  height: 43px !important;
+  background: rgba(40, 42, 52, 0.7);
+  border: none;
+  color: #9A9494;
+  padding-left: 50px;
+  border-radius: 4px;
+}
+
+.login__form input::-webkit-input-placeholder, .login__form input:-ms-input-placeholder, .login__form input::-ms-input-placeholder {
+  color: #ACADB0;
+}
+
+.login__form input::-webkit-input-placeholder {
+  color: #ACADB0;
+}
+
+.login__form input:-ms-input-placeholder, .login__form input::-ms-input-placeholder, .login__form input:-ms-input-placeholder {
+  color: #ACADB0;
+}
+
+.login__form input:-ms-input-placeholder, .login__form input::-ms-input-placeholder, .login__form input::-ms-input-placeholder {
+  color: #ACADB0;
+}
+
+.login__form input:-ms-input-placeholder, .login__form input::-ms-input-placeholder, .login__form input::placeholder {
+  color: #ACADB0;
+}
+
+.login__form .btn_login {
+  display: block;
+  margin-top: 40px;
+}
+
+.login__form .btn_login input {
+  display: block;
+  padding: 0;
+  width: 100%;
+  height: 42px;
+  background: #006DFF;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.login .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 70px 0;
+  text-align: center;
+  border-top: 1px solid #24242D;
+  color: rgba(99, 99, 113, 0.4);
+  font-weight: 300;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  line-height: 36px;
+  min-width: 1368px;
+  height: 60px;
+  padding: 12px;
+  background: #222527;
+  z-index: 998;
+}
+
+.header__title {
+  float: left;
+  font-size: 18px;
+  font-weight: 700;
+  color: #75797d;
+}
+
+.header__title img {
+  width: 110px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.header__title:after {
+  content: '';
+  border-right: 2px solid #75797d;
+  padding: 0 4px;
+}
+
+.header h2 {
+  float: left;
+  margin-left: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.topBtns {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 120px;
+  height: 60px;
+  z-index: 998;
+  background-color: #222527;
+}
+
+.topBtns > li {
+  position: relative;
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-left: 1px solid #404345;
+}
+
+.topBtns > li .dropdown {
+  display: none;
+  position: absolute;
+  width: 200px;
+  right: 0;
+  z-index: 999;
+}
+
+.topBtns > li .dropdown li {
+  background: #232729;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #404345;
+}
+
+.topBtns > li .dropdown li a {
+  padding: 0 15px;
+  color: #7a7d80;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.topBtns > li .dropdown li a:hover {
+  color: #ffffff;
+}
+
+.topBtns > li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.topBtns > li a:hover {
+  background-color: #232729;
+}
+
+.topBtns > li .setting {
+  background: url(../images/ico_setting.png) center 50% no-repeat;
+}
+
+.topBtns > li .logout {
+  background: url(../images/ico_logout.png) center 50% no-repeat;
+}
+
+.searchSlide {
+  position: absolute;
+  top: 0;
+  right: 120px;
+  width: 55px;
+  height: 60px;
+  overflow: hidden;
+  z-index: 700;
+  /* ie 기본 화살표 없앰 */
+}
+
+.searchSlide__btn {
+  float: left;
+  width: 55px;
+  height: 60px;
+  background: url(../images/ico_search.png) center 50% no-repeat;
+  border-left: 1px solid #404345;
+}
+
+.searchSlide select {
+  float: left;
+  padding: 0px 5px;
+  margin-top: 15px;
+  width: 145px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  background: url(../images/select_bg.gif) 100% 50% no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  word-wrap: break-word;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+.searchSlide select::-ms-expand {
+  display: none;
+}
+
+.searchSlide .topsearch_ipt {
+  float: left;
+  margin-top: 15px;
+  width: 290px;
+  height: 30px;
+  vertical-align: top;
+  border-radius: 4px;
+}
+
+.searchSlide select + .topsearch_ipt {
+  margin-left: 8px;
+}
+
+.searchSlide .borderbtn {
+  display: inline-block;
+  height: 30px;
+  min-width: 70px;
+  padding: 0 8px;
+  margin-top: 15px;
+  margin-left: 8px;
+  line-height: 29px;
+  border: 1px solid #0080fe;
+  border-radius: 4px;
+  color: #0080fe;
+  text-align: center;
+}
+
+.searchSlide .borderbtn:hover {
+  background: #0080fe;
+  color: #ffffff;
+}
+
+.searchSlide.open {
+  width: 600px;
+}
+
+.aside {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 110px;
+  height: calc(100% - 60px);
+  background: url(../images/menu_bg.png) no-repeat;
+  background-color: #222527;
+  z-index: 997;
+}
+
+.aside .nav li {
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.aside .nav li a {
+  display: block;
+  width: 100%;
+  height: 110px;
+}
+
+.aside .nav li:after {
+  content: '';
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.aside .nav li:first-child a {
+  background: url(../images/menu_01.png) right top no-repeat;
+}
+
+.aside .nav li:nth-child(2) a {
+  background: url(../images/menu_02.png) right top no-repeat;
+}
+
+.aside .nav li:nth-child(3) a {
+  background: url(../images/menu_03.png) right top no-repeat;
+}
+
+.aside .nav li > a.active {
+  background-position: left top;
+}
+
+.aside .nav li > a:hover {
+  background-position: left top;
+}
+
+.aside .date {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 110px;
+  background: #1e1e1e;
+  padding: 10px  0;
+}
+
+.aside .date li {
+  color: #7a7d80;
+  text-align: center;
+  line-height: 1.21;
+  font-size: 13px;
+}
+
+.aside .date li:first-child {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.section {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  min-width: 1368px;
+}
+
+.section iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.section.admin {
+  background: #eef2f5;
+}
+
+#gisFrame {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: url(../images/gis_bg.png) left top no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.areaInfo {
+  position: absolute;
+  top: 70px;
+  left: 120px;
+  width: 300px;
+  background: rgba(28, 32, 38, 0.8);
+  color: #93999e;
+}
+
+.areaInfo__title {
+  position: relative;
+  background: rgba(24, 26, 28, 0.9);
+  font-size: 16px;
+}
+
+.areaInfo__title select {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  color: #595d60;
+  background: url(../images/title_select.png) 92% 50% no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  word-wrap: break-word;
+  border: none;
+  height: auto;
+}
+
+.areaInfo__title .locationPin {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 21px;
+  height: 21px;
+  background: url(../images/pin_off.png) center 2px no-repeat;
+}
+
+.areaInfo__title .locationPin.pinon {
+  background: url(../images/pin_on.png) center 2px no-repeat;
+}
+
+.areaInfo__h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: left;
+}
+
+.areaInfo__weather {
+  text-align: center;
+}
+
+.areaInfo__weather .weatherimg {
+  display: inline-block;
+}
+
+.areaInfo__weather .weatherimg img {
+  float: left;
+}
+
+.areaInfo__weather dl.weathericon {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.areaInfo__weather dl.weathericon dt {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
+}
+
+.areaInfo__weather dl.weathericon dd {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.areaInfo__weather dl.weathericon dd ul li {
+  display: inline-block;
+  text-align: left;
+}
+
+.areaInfo__weather dl.weathericon dd ul li.temp {
+  font-weight: bold;
+}
+
+.areaInfo__weather dl.weathericon dd ul li.text {
+  font-weight: 300;
+}
+
+.areaInfo__weather .addtional {
+  overflow: hidden;
+  clear: both;
+  width: 90%;
+  margin: 8px auto 0;
+}
+
+.areaInfo__weather .addtional__opt {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+.areaInfo__weather .addtional__opt dt {
+  float: left;
+  color: #8f8f8f;
+}
+
+.areaInfo__weather .addtional__opt dd {
+  color: #ffffff;
+  text-align: right;
+}
+
+.areaInfo__air .air li {
+  float: left;
+  width: 50%;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.areaInfo__air .air li .figure {
+  display: block;
+  font-size: 21px;
+  letter-spacing: -1px;
+}
+
+.areaInfo__air .air li .lv1 {
+  color: #20bcf6;
+}
+
+.areaInfo__air .air li .lv2 {
+  color: #77d62e;
+}
+
+.areaInfo__air .air li .lv3 {
+  color: #e1c63f;
+}
+
+.areaInfo__air .air li .lv4 {
+  color: #eb5151;
+}
+
+.areaInfo__air .air li:nth-child(2n) {
+  background: url(../images/line01.png) left 15px no-repeat;
+}
+
+.areaInfo .lvlegend {
+  clear: both;
+  padding: 8px 0;
+  border-top: 1px solid #151617;
+  color: #93999e;
+  font-size: 12px;
+  text-align: center;
+}
+
+.areaInfo .lvlegend li {
+  display: inline-block;
+}
+
+.areaInfo .lvlegend li:before {
+  content: '●';
+  margin-right: 4px;
+}
+
+.areaInfo .lvlegend li + li {
+  margin-left: 20px;
+}
+
+.areaInfo .lvlegend li.lv1:before {
+  color: #20bcf6;
+}
+
+.areaInfo .lvlegend li.lv2:before {
+  color: #77d62e;
+}
+
+.areaInfo .lvlegend li.lv3:before {
+  color: #e1c63f;
+}
+
+.areaInfo .lvlegend li.lv4:before {
+  color: #eb5151;
+}
+
+.latestEvent {
+  position: absolute;
+  top: 475px;
+  left: 120px;
+  width: 300px;
+  background: rgba(28, 32, 38, 0.8);
+}
+
+.latestEvent .areaInfo__title h2 {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #595d60;
+}
+
+.latestEvent .areaInfo__title select {
+  border: 0;
+}
+
+.latestEvent__content.alarm dl {
+  position: relative;
+  padding-left: 50px;
+  padding-top: 8px;
+  padding-right: 10px;
+  padding-bottom: 8px;
+  line-height: 1.3;
+}
+
+.latestEvent__content.alarm dl dt a {
+  font-size: 14px;
+  color: #d5d5d5;
+  font-weight: 500;
+}
+
+.latestEvent__content.alarm dl dd {
+  font-size: 9px;
+  color: #d5d5d5;
+}
+
+.latestEvent__content.alarm dl:before {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.latestEvent__content.alarm dl.video:before {
+  content: '영상';
+  background: #c500ff;
+}
+
+.latestEvent__content.alarm dl.police:before {
+  content: '경찰';
+  background: #006dff;
+}
+
+.latestEvent__content.alarm dl.fire:before {
+  content: '소방';
+  background: #fd4357;
+}
+
+.latestEvent__content.alarm dl.jaenan:before {
+  content: '재난';
+  background: #ff832b;
+}
+
+.latestEvent__content.alarm dl.support:before {
+  content: '사회';
+  background: #39d500;
+}
+
+.latestEvent__content.alarm dl + dl {
+  border-top: 1px solid rgba(109, 120, 122, 0.3);
+}
+
+.latestEvent__content.tbllist {
+  color: #ffffff;
+}
+
+.latestEvent__content.tbllist table th, .latestEvent__content.tbllist table td {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  color: #d5d5d5;
+  text-align: left;
+}
+
+.latestEvent__content.tbllist table th a, .latestEvent__content.tbllist table td a {
+  color: #d5d5d5;
+}
+
+.latestEvent__content.tbllist table th {
+  background: rgba(101, 154, 245, 0.1);
+}
+
+.latestEvent__content.tbllist table td {
+  border-bottom: 1px solid rgba(112, 112, 112, 0.5);
+}
+
+.latestEvent__content.tbllist table tbody tr:hover td {
+  background: #006dff;
+}
+
+.bottomPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  position: absolute;
+  left: 110px;
+  bottom: 0;
+  width: calc(100% - 110px);
+  min-width: 1258px;
+  padding: 5px;
+  background: rgba(28, 32, 38, 0.9);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+.bottomPanel .camera {
+  position: relative;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+}
+
+.bottomPanel .camera__name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  background: rgba(13, 14, 14, 0.5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.bottomPanel .camera img {
+  width: 100%;
+}
+
+.bottomPanel .camera + .camera {
+  margin-left: 5px;
+}
+
+.bottomPanel .panelbtn {
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 110px;
+  height: 20px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  z-index: 200;
+  background-color: rgba(13, 14, 14, 0.5);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.bottomPanel .panelbtn:hover {
+  background-color: rgba(13, 14, 14, 0.8);
+}
+
+.bottomPanel .panelbtn:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: url(../images/arrow_down.png) center 50% no-repeat;
+  background-size: 12px;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.bottomPanel .panelbtn.open:before {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.gisControl {
+  position: absolute;
+  left: 430px;
+  top: 70px;
+  width: 55px;
+  background: #222527;
+  border: 1px solid #191c1e;
+  border-radius: 4px;
+}
+
+.gisControl ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #8f8f8f;
+  letter-spacing: -0.8px;
+  font-size: 11px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.gisControl ul li a .icon {
+  display: block;
+  width: 21px;
+  height: 21px;
+  margin: 9px auto 5px;
+}
+
+.gisControl ul li a:hover {
+  color: #0080fe;
+}
+
+.gisControl ul li a:hover .icon {
+  background-position: right top;
+}
+
+.gisControl .active a {
+  color: #0080fe;
+}
+
+.gisControl .active a .icon {
+  background-position: right top;
+}
+
+.gisControl__1dp li {
+  display: inline-block;
+  width: 100%;
+  height: 55px;
+}
+
+.gisControl__1dp .map {
+  position: relative;
+}
+
+.gisControl__1dp .map:before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  background: url(../images/map_more.png) center top no-repeat;
+}
+
+.gisControl__1dp .map:hover .mapmore {
+  display: block;
+}
+
+.gisControl__1dp .map .mapmore {
+  display: none;
+  position: absolute;
+  left: 53px;
+  top: -1px;
+  width: 167px;
+  height: 56px;
+  background: #222527;
+  border: 1px solid #191c1e;
+  border-radius: 0px 4px 4px 0px;
+  border-left-color: #2b3035;
+}
+
+.gisControl__1dp li + li {
+  border-top: 1px solid #2b3035;
+}
+
+.gisControl__1dp .cameramove .icon {
+  background: url(../images/cameramove.png) left top no-repeat;
+}
+
+.gisControl__1dp .distance .icon {
+  background: url(../images/distance.png) left top no-repeat;
+}
+
+.gisControl__1dp .square .icon {
+  background: url(../images/square.png) left top no-repeat;
+}
+
+.gisControl__1dp .map .icon {
+  background: url(../images/map.png) left top no-repeat;
+}
+
+.gisControl__1dp .traffic .icon {
+  background: url(../images/traffic.png) left top no-repeat;
+}
+
+.gisControl__1dp .satellite .icon {
+  background: url(../images/satellite.png) left top no-repeat;
+}
+
+.gisControl__1dp .location .icon {
+  background: url(../images/location.png) left top no-repeat;
+}
+
+.gisControl__1dp .layer .icon {
+  background: url(../images/layer.png) left top no-repeat;
+}
+
+.gisControl__2dp li {
+  float: left;
+  width: 55px;
+}
+
+.gisControl__2dp li + li {
+  border-left: 1px solid #2b3035;
+}
+
+.leftPanel {
+  position: relative;
+  left: 110px;
+  top: 60px;
+  width: 300px;
+  height: calc(100% - 60px);
+  background: #F1F1F1;
+}
+
+.leftPanel__title {
+  background-color: #ffffff;
+  border-bottom: 1px solid #DBDBDB;
+  margin-bottom: 2px;
+}
+
+.leftPanel__title select {
+  padding: 10px;
+  width: 100%;
+  background: url(../images/select_bg.gif) 97% 50% no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  word-wrap: break-word;
+  z-index: 10;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.leftPanel__listwrap {
+  width: 100%;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.leftPanel__view {
+  margin-top: 4px;
+}
+
+.leftPanel__view h4 {
+  width: 100%;
+  padding: 4px 0;
+  background: #CFCFCF;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cardList {
+  border: 1px solid #ffffff;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.cardList:hover {
+  border: 1px solid #CFCFCF;
+}
+
+.cardList__title {
+  width: 100%;
+  background: #ffffff;
+  color: #5F6367;
+  font-size: 13px;
+  overflow-y: hidden;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.cardList__title dt {
+  float: left;
+  width: 45px;
+  color: #ffffff;
+  text-align: center;
+  height: 18px;
+  font-size: 12px;
+}
+
+.cardList__title dd {
+  float: left;
+  width: calc(100% - 45px);
+  padding-left: 5px;
+  color: #5F6367;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardList__title .video {
+  background: #C500FF;
+  border: 1px solid #9B00C8;
+}
+
+.cardList__title .police {
+  background: #006dff;
+  border: 1px solid #005DD9;
+}
+
+.cardList__title .fire {
+  background: #fd4357;
+  border: 1px solid #DF3548;
+}
+
+.cardList__title .jaenan {
+  background: #ff832b;
+  border: 1px solid #E67422;
+}
+
+.cardList__title .support {
+  background: #39d500;
+  border: 1px solid #3BB110;
+}
+
+.cardList .info {
+  overflow: hidden;
+  background: #ffffff;
+  border-bottom: 1px solid #F1F1F1;
+  padding: 4px 0;
+}
+
+.cardList__col2 {
+  float: left;
+  padding: 0 10px;
+}
+
+.cardList__col2 dt {
+  font-size: 12px;
+  color: #75797D;
+  font-weight: 700;
+  float: left;
+  margin-right: 8px;
+}
+
+.cardList__col2 dd {
+  float: left;
+  font-size: 12px;
+  color: #75797D;
+  font-weight: 300;
+}
+
+.cardList__col2 + .cardList__col2 {
+  padding-left: 10px;
+}
+
+.cardList + .cardList {
+  margin-top: 4px;
+}
+
+.viewarea {
+  overflow-y: scroll;
+  width: 100%;
+  height: calc(100vh - 745px);
+  min-height: 220px;
+  background: #ffffff;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.viewarea th {
+  background: #F1F1F1;
+  text-align: left;
+  font-weight: 500;
+}
+
+.viewarea th, .viewarea td {
+  padding: 4px;
+  border-bottom: 1px solid #F1F1F1;
+  letter-spacing: -1px;
+}
+/*# sourceMappingURL=layout_new.css.map */
